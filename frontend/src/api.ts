@@ -15,7 +15,8 @@ export async function apiFetch<T = unknown>(
   options: RequestInit = {},
 ): Promise<T> {
   const token = getToken();
-  const res = await fetch(`/api${path}`, {
+  const base = import.meta.env.VITE_API_BASE_URL ?? '';
+  const res = await fetch(`${base}/api${path}`, {
     ...options,
     headers: {
       'Content-Type': 'application/json',
