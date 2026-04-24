@@ -1,0 +1,58 @@
+{
+  "hash": "5eca9369",
+  "configHash": "ea72d359",
+  "lockfileHash": "0980dd70",
+  "browserHash": "461c5d4a",
+  "optimized": {
+    "react-calendar": {
+      "src": "../../node_modules/react-calendar/dist/index.js",
+      "file": "react-calendar.js",
+      "fileHash": "d5d7434d",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "e29f708d",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "d9724965",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "3bad6a42",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "813514e5",
+      "needsInterop": true
+    },
+    "recharts": {
+      "src": "../../node_modules/recharts/es6/index.js",
+      "file": "recharts.js",
+      "fileHash": "fdeb4f9c",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "clsx-BUU5J41u": {
+      "file": "clsx-BUU5J41u.js",
+      "isDynamicEntry": false
+    },
+    "react-BDWiK9rz": {
+      "file": "react-BDWiK9rz.js",
+      "isDynamicEntry": false
+    },
+    "react-dom-C08K6auO": {
+      "file": "react-dom-C08K6auO.js",
+      "isDynamicEntry": false
+    }
+  }
+}

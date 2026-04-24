@@ -1,0 +1,467 @@
+/* ── Theme ─────────────────────────────────────────────────────────── */
+:root {
+  --bg: #1c1c1e;
+  --surface: #2a2a2d;
+  --surface-hover: #333337;
+  --border: #3a3a3e;
+  --orange: #f97316;
+  --orange-hover: #ea580c;
+  --text: #f1f1f1;
+  --text-muted: #9a9a9f;
+  --danger: #f87171;
+  --radius: 8px;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Reset ─────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Auth screens ───────────────────────────────────────────────────── */
+.auth-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--bg);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 380px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 36px 32px;
+}
+
+.auth-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--orange);
+  text-align: center;
+  margin-bottom: 4px;
+  letter-spacing: -0.2px;
+}
+
+.auth-subtitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 28px;
+  letter-spacing: -0.3px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.btn-full {
+  width: 100%;
+  padding: 11px;
+  margin-top: 4px;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.auth-switch a {
+  color: var(--orange);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+/* ── NavBar ─────────────────────────────────────────────────────────── */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 60px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--orange);
+  letter-spacing: -0.2px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 4px;
+}
+
+.navbar-links a {
+  padding: 7px 16px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.15s, background 0.15s;
+}
+
+.navbar-links a:hover {
+  color: var(--text);
+  background: var(--surface-hover);
+}
+
+.navbar-links a.active {
+  color: var(--orange);
+  background: rgba(249, 115, 22, 0.12);
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-username {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.btn-logout {
+  padding: 6px 14px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.btn-logout:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+/* ── Page layout ────────────────────────────────────────────────────── */
+.page-content {
+  flex: 1;
+  max-width: 880px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 36px 24px;
+}
+
+.page h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 28px;
+  letter-spacing: -0.4px;
+}
+
+/* ── Workouts page ──────────────────────────────────────────────────── */
+.add-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.text-input {
+  flex: 1;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.text-input:focus {
+  border-color: var(--orange);
+}
+
+.text-input::placeholder {
+  color: var(--text-muted);
+}
+
+.btn-primary {
+  padding: 10px 22px;
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background: var(--orange-hover);
+}
+
+.error-msg {
+  color: var(--danger);
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+.workout-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.workout-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.15s;
+}
+
+.workout-card:hover {
+  border-color: #52525a;
+}
+
+.workout-name {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.btn-delete {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 7px;
+  border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.btn-delete:hover {
+  color: var(--danger);
+  background: rgba(248, 113, 113, 0.1);
+}
+
+.empty-state {
+  color: var(--text-muted);
+  text-align: center;
+  padding: 56px 0;
+  font-size: 0.95rem;
+}
+
+/* ── Calendar page ──────────────────────────────────────────────────── */
+.calendar-layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+@media (max-width: 680px) {
+  .calendar-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.reps-section {
+  min-width: 0;
+}
+
+.reps-date {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.reps-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.reps-table th {
+  text-align: left;
+  padding: 8px 14px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.reps-table td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.reps-table tr:last-child td {
+  border-bottom: none;
+}
+
+.reps-input {
+  width: 80px;
+  padding: 6px 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 0.9rem;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.15s;
+  -moz-appearance: textfield;
+}
+
+.reps-input:focus {
+  border-color: var(--orange);
+}
+
+.reps-input::-webkit-outer-spin-button,
+.reps-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* ── react-calendar overrides ───────────────────────────────────────── */
+.react-calendar {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  color: var(--text) !important;
+  font-family: inherit !important;
+  width: 300px !important;
+  line-height: 1.5 !important;
+}
+
+.react-calendar__navigation button {
+  color: var(--text) !important;
+  background: none !important;
+  border-radius: 6px !important;
+  min-width: 40px !important;
+  font-size: 0.9rem !important;
+}
+
+.react-calendar__navigation button:enabled:hover {
+  background: var(--surface-hover) !important;
+}
+
+.react-calendar__navigation button:disabled {
+  color: var(--text-muted) !important;
+}
+
+.react-calendar__month-view__weekdays {
+  color: var(--text-muted) !important;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+  text-decoration: none !important;
+  font-size: 0.75rem !important;
+}
+
+.react-calendar__tile {
+  color: var(--text) !important;
+  border-radius: 6px !important;
+  font-size: 0.875rem !important;
+  padding: 7px 4px !important;
+}
+
+.react-calendar__tile:enabled:hover {
+  background: var(--surface-hover) !important;
+}
+
+.react-calendar__tile--now {
+  background: rgba(249, 115, 22, 0.12) !important;
+}
+
+.react-calendar__tile--active,
+.react-calendar__tile--active:enabled:hover {
+  background: var(--orange) !important;
+  color: #fff !important;
+}
+
+.react-calendar__tile:disabled {
+  color: var(--border) !important;
+}
+
+.cal-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--orange);
+  margin: 2px auto 0;
+}
+
+/* ── Progress page ──────────────────────────────────────────────────── */
+.chart-wrapper {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 12px 24px 4px;
+}
